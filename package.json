@@ -1,0 +1,35 @@
+{
+  "name": "medtracker-backend",
+  "version": "1.0.0",
+  "description": "Express API for the MedTracker portfolio project.",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "db:init": "node scripts/init-db.js",
+    "check": "node --check src/server.js && node --check src/app.js && node --check src/config/env.js && node --check src/config/db.js && node --check src/middleware/auth.middleware.js && node --check src/middleware/error.middleware.js && node --check src/controllers/auth.controller.js && node --check src/controllers/member.controller.js && node --check src/controllers/medicine.controller.js && node --check src/controllers/schedule.controller.js && node --check src/controllers/dose.controller.js && node --check src/controllers/dashboard.controller.js && node --check src/controllers/invite.controller.js && node --check src/routes/index.js && node --check src/routes/auth.routes.js && node --check src/routes/member.routes.js && node --check src/routes/medicine.routes.js && node --check src/routes/schedule.routes.js && node --check src/routes/dose.routes.js && node --check src/routes/dashboard.routes.js && node --check src/routes/invite.routes.js && node --check src/utils/http-error.js && node --check src/utils/async-handler.js && node --check src/utils/jwt.js && node --check scripts/init-db.js"
+  },
+  "keywords": [
+    "express",
+    "supabase",
+    "postgres",
+    "medtracker"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
+    "pg": "^8.20.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
