@@ -18,6 +18,18 @@ app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json());
 
+app.get('/', (_req, res) => {
+  res.json({
+    message: 'MedTracker API is running.',
+    health: '/health',
+    apiBase: '/api'
+  });
+});
+
+app.get('/favicon.ico', (_req, res) => {
+  res.status(204).end();
+});
+
 app.get('/health', (_req, res) => {
   res.json({
     status: 'ok',
